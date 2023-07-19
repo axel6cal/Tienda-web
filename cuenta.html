@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta - Stradbrok | Muebles de Oficina</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo2.png" width="135px"></a>  
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Tienda</a></li>
+                    <li><a href="">Sobre nosotros</a></li>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="cuenta.html">Cuenta</a></li>
+                </ul>
+            </nav>
+            <a href="carrito.html"><img src="img/carrito.png" width="30px" height="30px "></a>
+            <img src="img/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+
+
+<!------ Pagina de la cuenta ------->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="img/image-1.png">
+            </div>
+
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Entrar</span>
+                        <span onclick="register()">Registrarse</span>
+                        <hr id="Indicador">
+                    </div>
+
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Usuario">
+                        <input type="password" placeholder="Contraseña">
+                        <button type="submit" class="btn">Entrar</button>
+                        <a href="">Olvide la contraseña</a>
+                    </form>
+
+                    <form id="RegForm">
+                        <input type="text" placeholder="Usuario">
+                        <input type="email" placeholder="Correo">
+                        <input type="password" placeholder="Contraseña">
+                        <button type="submit" class="btn">Registrarse</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!------ Footer ------->
+
+<div class="footer">
+    <div class="contenedor">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Descarga nuestra aplicacion</h3>
+                <p>Descarga disponible para iOS y Android</p>
+                <div class="app-logo">
+                    <img src="img/playstore.png">
+                    <img src="img/appstore.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="img/logo-footer.png">
+                <p>Nuestro proposito es ayudarte a tener un espacio de trabajo a tu manera.
+                    Con la mejor comodidad a los mejores precios.
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Menu Servicio al Cliente</h3>
+                <ul>
+                    <li>Cupones</li>
+                    <li>Politicas de devolucion</li>
+                    <li>Blog</li>
+                    <li>Mayoreo de empresas</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Siguenos</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021 - Stradbrok</p>
+    </div>
+</div>
+
+<!------ js menu toggle ------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+<!------ js cuenta cambio ------->
+
+<script>
+
+var LoginForm = document.getElementById("LoginForm");
+var RegForm = document.getElementById("RegForm");
+var Indicador = document.getElementById("Indicador");
+
+    function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicador.style.transform = "translateX(100px)";
+    }
+
+    function login() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicador.style.transform = "translateX(0px)";
+    }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
